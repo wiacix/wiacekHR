@@ -1,0 +1,129 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family:'Times New Roman', Times, serif;
+    color: #0A2647;
+    text-align: center;
+    background-color: #DDFFBB;
+    background-image: url("../IMG/logo_ZHR.png"), url("../IMG/wave.png"), url("../IMG/logo_HHK.png");
+    background-size: auto, 100% 20%, auto;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: right top, bottom, left top;
+    background-attachment: scroll, fixed, scroll;
+}
+
+/* MAIN HEADER */
+#typewriter_header{
+    width: 100%;
+    margin-top: 1em;
+}
+#typewriter_header h1 span{
+    font-size: 120%;
+    color: #558a2c;
+    position: relative;
+}
+#typewriter_header h2 span{
+    color: #68b654;
+}
+
+/* Typewriting animations */
+#typewriter_header h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.06em;
+    animation: typing 4s steps(40, end);
+}
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+/* h2 header animation */
+@keyframes left-right{
+    0% {margin-left: -300px;}
+    50% {margin-left: 150px;}
+    100% {margin-left: 0px;}
+}
+@keyframes right-left{
+    0% {margin-right: -300px;}
+    50% {margin-right: 150px;}
+    100% {margin-right: 0px;}
+}
+#header_h2_1{
+    white-space: nowrap;
+    animation: left-right 2s;
+}
+#header_h2_2{
+    white-space: nowrap;
+    animation: right-left 2s;
+}
+  
+/* main */
+main{
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_menu img{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.main_menu{
+    position: relative;
+    width: 15em;
+    margin: 0 2% 0 2%;
+    border-radius: 50%;
+}
+.main_menu p{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    width: auto;
+    height: auto;
+}
+.main_menu a{
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/* RWD */
+@media only screen and (max-width: 800px){
+    body{
+        background-image: url('../IMG/wave.png');
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+    main{
+        flex-direction: column;
+    }
+    .main_menu{
+        margin: 2% 0 2% 0;
+    }
+}
+@media only screen and (max-width: 450px){
+    #typewriter_header h2{
+        display: flex;
+        flex-direction: column;
+    }
+}

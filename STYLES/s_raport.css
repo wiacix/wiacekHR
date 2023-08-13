@@ -1,0 +1,376 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family:'Times New Roman', Times, serif;
+    color: #0A2647;
+    text-align: center;
+    background-color: #DDFFBB;
+    background-image: url("../IMG/logo_ZHR.png"), url("../IMG/wave.png"), url("../IMG/logo_HHK.png");
+    background-size: auto, 100% 20%, auto;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: right top, bottom, left top;
+    background-attachment: scroll, fixed, scroll;
+}
+
+/* MAIN HEADER */
+#typewriter_header{
+    width: 100%;
+    margin-top: 1em;
+}
+#typewriter_header h1 span{
+    font-size: 1.5em;
+    color: #558a2c;
+    position: relative;
+}
+#typewriter_header h2 span{
+    color: #68b654;
+}
+
+/* Typewriting animations */
+#typewriter_header h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.06em;
+    animation: typing 4s steps(40, end);
+}
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+/* h2 header animation */
+@keyframes left-right{
+    0% {margin-left: -300px;}
+    50% {margin-left: 150px;}
+    100% {margin-left: 0px;}
+}
+@keyframes right-left{
+    0% {margin-right: -300px;}
+    50% {margin-right: 150px;}
+    100% {margin-right: 0px;}
+}
+#header_h2_1{
+    animation: left-right 2s;
+}
+#header_h2_2{
+    animation: right-left 2s;
+}
+
+/* nav */
+#nav_raport{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-top: 12px;
+}
+#nav_raport > div{
+    width: 25%;
+    background-color: #008a1e34;
+    height: min-content;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#nav_raport > div > ul{
+    display: none;
+    margin-top: -3px;
+}
+#nav_raport > div:hover{
+    background-color: #64bd2180;
+}
+#nav_raport > div:hover ul{
+    display: block;
+}
+#nav_raport ul{
+    padding: 0;
+    width: 100%;
+}
+#nav_raport ul li{
+    list-style-type: none;
+    padding: 3px 0;
+    width: 100%;
+    display: flex;
+}
+#nav_raport ul li a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-weight: 500;
+}
+#nav_raport ul li a:hover{
+    background-color: #07c70065;
+}
+/* main */
+main{
+    width: 80%;
+    margin-top: 1em;
+}
+main > div h2{
+    font-size: 160%;
+}
+main > div h3{
+    font-size: 130%;
+}
+main > div p{
+    font-size: 120%;
+}
+.download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.download img{
+    width: 27px;
+    margin: 0 5px;
+}
+#img_1{
+    transform: rotate(180deg)
+}
+#img_2{
+    transform: scaleY(-1);
+}
+.download a{
+    text-decoration: none;
+    color: #009c22;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+main > div{
+    display: none;
+}
+.right_img{
+    float: right; 
+    margin: 15px;
+    width: 30%;
+    border-radius: 20px;
+}
+.left_img{
+    float: left; 
+    margin: 15px;
+    width: 40%;
+    border-radius: 20px;
+}
+.right_img_min{
+    display: none;
+    width: 100%;
+    border-radius: 20px;
+}
+.cytat{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-top: 40px;
+}
+.cytat_gora{
+    background-image: url('../IMG/pergamin_gora.png');
+    height: 142px;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cytat_gora p{
+    font-size: 130%;
+    font-weight: 600;
+}
+.cytat_srodek{
+    background-image: url('../IMG/pergamin_srodek.png');
+    height: auto;
+    width: 100%;
+    background-repeat: repeat-y;
+    display: flex;
+    justify-content: center;
+}
+.cytat_srodek p{
+    width: 75%;
+    font-style: italic;
+    text-align: justify;
+}
+.cytat_dol{
+    background-image: url('../IMG/pergamin_dol.png');
+    height: 180px;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+}
+.tresc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+.cytat_dol p{
+    margin-right: 10%;
+}
+
+.tresc table{
+    width: 75%;
+}
+.tresc table, .tresc table td, .tresc table th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 7px;
+    text-align: justify;
+}
+.tresc table tr th{
+    text-align: center;
+    font-size: 120%;
+}
+.tresc table tr td:nth-child(3){
+ text-align: center;
+}
+/* SLIDER WYCZYN */
+#slider_wyczyn{
+    display: flex;
+    flex-direction: column;
+}
+#wyczyn_zjdecia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#wyczyn_zjdecia input{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    border: none;
+    width: 30px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 150%;
+}
+#wyczyn_zjdecia input:hover{
+    background-color: rgba(0, 0, 0, 0.596);
+}
+#wyczyn_left_btn{
+    z-index: 1;
+    margin-right: -30px;
+}
+#wyczyn_right_btn{
+    z-index: 1;
+    margin-left: -30px;
+}
+#wyczyn_tresc_p{
+    text-align: center;
+}
+/* footer */
+
+footer{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer img{
+    background-color: #68b65494;
+    border-radius: 50%;
+    transition: 0.5s;
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+}
+footer img:hover{
+    padding: 10%;
+    margin: 0%;
+}
+
+
+/* RWD */
+@media only screen and (max-width: 800px){
+    body{
+        background-image: url('../IMG/wave.png');
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+    main{
+        flex-direction: column;
+        text-align: justify;
+    }
+    main h2{
+        text-align: center;
+    }
+    #nav_raport{
+        width: 100%;
+    }
+    #nav_raport div{
+        width: 100%;
+    }
+    #nav_raport ul li a{
+        height: 30px;
+    }
+    .left_img{
+        width: 70%;
+    }
+    .right_img{
+        width: 60%;
+    }
+    .cytat{
+        width: 100%;
+        background-color: #009c2252;
+        border-radius: 20px;
+    }
+    .cytat_gora{
+        background:none;
+        text-align: center;
+    }
+    .cytat_srodek{
+        background:none;
+        width: 90%;
+    }
+    .cytat_dol{
+        background:none;
+        height: auto;
+    }
+    .tresc table{
+        width: 100%;
+    }
+    #slider_wyczyn{
+        width: 100%;
+    }
+    #slider_wyczyn img{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 450px){
+    #typewriter_header h2{
+        display: flex;
+        flex-direction: column;
+    }
+    #nav_raport{
+        flex-direction: column;
+    }
+    #nav_raport div{
+        width: 100%;
+    }
+    .left_img{
+        width: 100%;
+    }
+    .right_img{
+        display: none;
+    }
+    .right_img_min{
+        display: block;
+    }
+}
